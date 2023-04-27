@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Rocio Albanez" />
+        <title>Rocio Albanez</title>
+        <!--En la siguiente línea voy por el estilo CSS que ofrece Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+        >
+        <style>
+            :root {
+                --bs-body-font-family: "Roboto Mono", monospace;
+            }
+            [data-bs-theme="light"] {
+                --bs-link-color-rgb: 100, 150, 100;
+                --bs-body-bg: #d9cec5;
+            }
+            [data-bs-theme="dark"] {
+                --bs-link-color-rgb: 200, 30, 200;
+            }
+            .bd-mode-toggle {
+                z-index: 1500;
+            }
+        </style>
+    </head>
+    <body>
+        <style>
+            @keyframes pipin {
+                0% {
+                    fill: #d2b3e5ed;
+                    transform: rotate(1deg);
+                    transform-origin: center center;
+                }
+                100% {
+                    fill: #a4ffc2;
+                    transform: rotate(-1deg);
+                }
+            }
+            path#logo {
+                animation: pipin 0.5s alternate-reverse infinite;
+            }
+
+            .bd-mode-toggle {
+                z-index: 1500;
+            }
+
+            #frase {
+                background: rgba(230, 237, 208, 0.06) url("img 1.jpg") center center no-repeat;
+                background-size: cover;
+                background-blend-mode: color;
+                opacity: 70%;
+            }
+        </style>
+        <body class="overflow-x-hidden">
+            <!--acá deben agregar más símbolos-->
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="check2" viewBox="0 0 16 16">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                </symbol>
+                <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                    />
+                    <path
+                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                    />
+                </symbol>
+                <symbol id="sun-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                    />
+                </symbol>
+            </svg>
+
+            <!--acá el cambio de themes-->
+            <meta name="theme-color" content="white" />
+
+            <body>
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol id="check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                    </symbol>
+                    <symbol id="circle-half" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+                    </symbol>
+                    <symbol id="moon-stars-fill" viewBox="0 0 50 16">
+                        <path
+                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                        />
+                        <path
+                            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                        />
+                    </symbol>
+                    <symbol id="sun-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                        />
+                    </symbol>
+                </svg>
+
+                  <div
+            class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button
+                class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center bg-dark-subtle shadow-sm"
+                id="bd-theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                    <use href="#circle-half"></use>
+                </svg>
+                <span class="visually-hidden" id="bd-theme-text"
+                    >Toggle theme</span
+                >
+            </button>
+            <ul
+                class="dropdown-menu dropdown-menu-end shadow"
+                aria-labelledby="bd-theme-text">
+                <li>
+                    <button
+                        type="button"
+                        class="dropdown-item d-flex align-items-center"
+                        data-bs-theme-value="light"
+                        aria-pressed="false">
+                        <svg
+                            class="bi me-2 opacity-50 theme-icon"
+                            width="1em"
+                            height="1em">
+                            <use href="#sun-fill"></use></svg
+                        >Light<svg
+                            class="bi ms-auto d-none"
+                            width="1em"
+                            height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button
+                        type="button"
+                        class="dropdown-item d-flex align-items-center"
+                        data-bs-theme-value="dark"
+                        aria-pressed="false">
+                        <svg
+                            class="bi me-2 opacity-50 theme-icon"
+                            width="1em"
+                            height="1em">
+                            <use href="#moon-stars-fill"></use></svg
+                        >Dark<svg
+                            class="bi ms-auto d-none"
+                            width="1em"
+                            height="1em">
+                            <use href="#check2"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+             
+                <header data-bs-theme="dark">
+                    <div class="collapse text-bg-tertiary" id="navbarHeader">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-7 py-4">
+                                    <h4>Sobre mí</h4>
+                                    <p class="text-body-info">
+                                        Me llamo Rocio y soy una Estudiante de 3er año de diseño, en mi tiempo libre disfruto de dibujar ya sea tradiconal o digitalmente y ver anime.
+                                    </p>
+                                </div>
+                                <div class="col-sm-4 offset-md-1 py-4">
+                                    <h4>Contact</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"
+                                                />
+                                            </svg>
+                                            <a href="#" class="text-black">Av. Providencia, Dos Caracoles , Local 704A</a>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                                                />
+                                            </svg>
+                                            <a href="#" class="text-black">@ciddop</a>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill me-2" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"
+                                                />
+                                                <path
+                                                    d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"
+                                                />
+                                            </svg>
+                                            <a href="#" class="text-black">rocio.albanez@ug.uchile.cl</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <body>
+                        <header>
+                            <div class="navbar navbar-dark bg-success shadow-sm">
+                                <div class="container">
+                                    <a href="#d2b3e5ed" class="navbar-brand navbar-colo-white d-flex align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#d2b3e5ed" class="bi bi-brush me-2" viewBox="0 0 16 16">
+                                            <path
+                                                id="logo"
+                                                d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z"
+                                            />
+                                        </svg>
+                                        <strong>Rocio Albanez</strong>
+                                    </a>
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </header>
+                        <section class="py-5" id="frase">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col py-5">
+                                        <p class="display-6 p-1 text-black text-opacity-100">
+                                            “Nuestra oportunidad, como diseñadores, es aprender a manejar la complejidad en lugar de huir de ella, y a realizar el gran arte del diseño haciendo simple lo complicado.”
+                                        </p>
+                                        <p class="display-6 p-1 text-black text-opacity-100">-Tim Parsey</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--una sección para las ventajas competitivas-->
+                        <section class="py-5">
+                            <div class="container">
+                                <div class="row g-5">
+                                    <div class="col-lg-4">
+                                        <h2 class="h4 fw-bolder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04zM4.705 11.912a1.23 1.23 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.39 3.39 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3.122 3.122 0 0 0 .126-.75l-.793-.792zm1.44.026c.12-.04.277-.1.458-.183a5.068 5.068 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005a.031.031 0 0 1-.007.004zm3.582-3.043.002.001h-.002z"
+                                                />
+                                            </svg>
+                                            Desempeño "Crear"
+                                        </h2>
+                                        <p>
+                                            Proyecta mediaciones para intervenir procesos relacionales entre las ciudadania y el entorno artificial.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h2 class="h4 fw-bolder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-palette" viewBox="0 0 16 16">
+                                                <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                                <path
+                                                    d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8zm-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7z"
+                                                />
+                                            </svg>
+                                            Desempeño "Evaluar"
+                                        </h2>
+                                        <p>
+                                            Emitir juicios críticos sobre instancia de mediacion entre las ciudadanias y sus contextos.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h2 class="h4 fw-bolder">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                                />
+                                            </svg>
+                                            Desempeño "Sistematizar"
+                                        </h2>
+                                        <p>
+                                            Documenta y comunica la práctica profesional o disciplinar para proponer nuevas formas de intervencion.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--principal-->
+                        <main>
+                            <div class="container" id="alla">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-3 g-3" id="aca"></div>
+                            </div>
+                        </main>
+
+                        <!--pie de página-->
+                        <footer class="bg-secondary-subtle mt-5">
+                            <div class="container py-4">
+                                <div class="row">
+                                    <div class="col-12 text-center text-body-secondary small">
+                                        <p>Rocio Albanez &copy; 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                        <!--un script que no necesita sin biblioteca-->
+                        <script>
+                            const data = [
+                                {
+                                    img: ["img 1.jpg", "img 1.2.jpg", "img 1.3.jpg"],
+                                    title: "Redraw sailor Moon 2022.",
+                                    text:
+                                        "<p>Redraw sailor moon es un reto de internet que consiste en redibujar una escena de sailor moon en tu propio estilo, desde el 2020 que estoy realizando este desafio como una herramineta para ver como he mejorado a la hora de dibujar, y hasta el dia de hoy esta es una de mis ilustraciones favoritas.</p>",
+                                },
+                                {
+                                    img: ["img 2.jpeg", "img 2.1.jpeg", "img 2.3.jpeg"],
+                                    title: "Vidrios y Economia.",
+                                    text:
+                                        "<p>Gracias a la pandemia, pude descubrir un nuevo hobby al cual le pude sacar algo de provecho economico, este hobby corresponde a la realizacion de vidrios pintados a pedido, los cuales les colocaba precio segun su tamaño, durante varios mese fue mi estabilidad economica pero debido a la universidad lo he dejado ultimamente.</p>",
+                                },
+                                {
+                                    img: ["img 3.jpeg", "img 3.1.jpg", "img 3.2.jpg"],
+                                    title: "Stickers.",
+                                    text:
+                                        "<p>Uno de mis ultimos 'proyectos' es crear stickers para poder vender en un futuro, y por ahora solo tengo un modelo, que corresponde a un dibujo digital de Monke D. Luffy y este lo imprimi en papel adhesivo. Al realizar esto me di cuenta lo importante de ver bien los colores que quieres, ya que cuando imprimes esos pueden salir totalmente diferentes pero nada que con un practica se pueda arreglar.</p>",
+                                },
+                                {
+                                    img: ["img 4.jpeg", "img 4.1.jpeg", "img 4.2.jpeg"],
+                                    title: "Lo mas industrial que he realizado.",
+                                    text:
+                                        "<p>El semestre pasado en el ramo proceso y prototipo II, el cual fue impartido por el profesor Mauricio Tapia, nos toco realizar taburetes desde cero, al inicio tenia mis dudas sobre como resultaria esto, sin embargo a la hora de ver los resultados quede absolutamente encantada con los taburetes, ademas con mi grupo logramos vender ambos.</p>",
+                                },
+                                {
+                                    img: ["img 5.2.jpg", "img 5.1.jpg", "img 5.2.jpg"],
+                                    title: "Collage Bolo.",
+                                    text:
+                                        "<p>Este collage corresponde a una actividad para el ramo de herramientas computacionales, en donde se trataba de una actividad para aprender a usar photoshop, decidi usar a mi perro como personaje principal ya que al momento de hacer la actividad era de quien tenia mas fotos.</p>",
+                                },
+                                {
+                                    img: ["img 6.jpg", "img 6.1.jpg", "img 6.2.jpg"],
+                                    title: "Proyecto Final de Herramientas.",
+                                    text:
+                                        "<p>Esta ilustracion del anime Mob Psycho 100 corresponde a mi trabajo final de herramientas computacionales, el cual consistia en utilizar distintas herramientas de edicion digital para lograr un resultado 2d o 3d, yo decidi irme por un lado 2d ya que se me hace mucho mas comodo y sencillo.</p>",
+                                },
+                                {
+                                    img: ["img 7.png", "img 7.1.png", "img 7.2.png"],
+                                    title: "Rube Machine Pokemon.",
+                                    text:
+                                        "<p>Este fue uno de mis primeros trabajos, por ende lo realized en modalidad online para el ramo de fisica aplicada al diseño, este trabajo consistia en moldear 3d una rube machine, en mi caso en vez de ser una esfera simple la que ocasionara las diferentes acciones decidi moldear una pokebola esto fue creado atraves de la aplicacion blender y si bien estuvo bastante complicado al inicio, despues de unos tutoriales en youtube logree un resultado bastante decente.</p>",
+                                },
+                                {
+                                    img: ["https://picsum.photos/id/593/800/500.webp", "https://picsum.photos/id/593/800/500.webp", "https://picsum.photos/id/593/800/500.webp"],
+                                    title: "Octavo lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                                    text:
+                                        "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh turpis, ullamcorper ut urna mattis, pulvinar faucibus massa. Nullam ac pellentesque mauris. Cras porttitor, diam sed malesuada malesuada, nunc turpis porttitor massa, vitae suscipit risus odio vel odio. Donec risus massa, condimentum nec enim non, laoreet feugiat nibh. Vivamus nec nisl in dolor placerat mattis. Proin rutrum non arcu non tempus. Ut at posuere orci. Nam sit amet magna laoreet, scelerisque mauris et, lacinia lectus. Sed felis turpis, facilisis ut nunc a, varius sollicitudin elit. Ut pharetra, mauris at scelerisque posuere, lacus dolor dapibus magna, eu maximus enim est eu quam. Morbi eu odio suscipit, cursus sem in, commodo est.</p>",
+                                },
+                            ];
+
+                            const donde = document.querySelector("#aca");
+                            data.forEach((x, i) => {
+                                donde.innerHTML +=
+                                    '<div class="col"><div class="card h-100 shadow-sm bg-light-subtle border-0"><img class="card-img-top" src="' +
+                                    x.img[0] +
+                                    '"><div class="card-body"><p class="card-title"><a href="#" onclick = "detalle(' +
+                                    i +
+                                    ')" class="text-decoration-none">' +
+                                    x.title +
+                                    "</a></p></div></div></div>";
+                            });
+                            const dondemas = document.querySelector("#alla");
+                            function detalle(nro) {
+                                var imageneria;
+                                data[nro].img.forEach((foto) => {
+                                    imageneria += '<img class="w-100 my-3 rounded" src="' + foto + '">';
+                                });
+                                dondemas.innerHTML =
+                                    '<div class="row"><div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto"><h1><button type="button" class="btn btn-sm btn-outline-secondary shadow-sm mb-2 me-3 fw-bold" onClick="window.location.reload()">&larr; VOLVER</button> ' +
+                                    data[nro].title +
+                                    "</h1>" +
+                                    imageneria +
+                                    data[nro].text +
+                                    "</div></div>";
+                                document.querySelectorAll("a.nav-link")[0].classList.remove("active");
+                                document.querySelectorAll("aside")[0].classList.add("d-none");
+                            }
+                        </script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+                    </body>
+                </header>
+            </body>
+        </body>
+    </body>
+</html>
